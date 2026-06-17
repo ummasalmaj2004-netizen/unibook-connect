@@ -10,7 +10,7 @@ import type { Database } from "@/integrations/supabase/types";
 type Appt = Database["public"]["Tables"]["appointments"]["Row"];
 
 export const Route = createFileRoute("/_authenticated/track")({
-  head: () => ({ meta: [{ title: "Track Appointments — UniBook" }] }),
+  head: () => ({ meta: [{ title: "Track Appointments — AIU-BOOK" }] }),
   component: TrackPage,
 });
 

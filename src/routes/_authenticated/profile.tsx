@@ -14,7 +14,7 @@ const DEPARTMENTS = [
 ];
 
 export const Route = createFileRoute("/_authenticated/profile")({
-  head: () => ({ meta: [{ title: "Profile — UniBook" }] }),
+  head: () => ({ meta: [{ title: "Profile — AIU-BOOK" }] }),
   component: ProfilePage,
 });
 

@@ -15,7 +15,7 @@ type Profile = Database["public"]["Tables"]["profiles"]["Row"];
 type Status = Database["public"]["Enums"]["appointment_status"];
 
 export const Route = createFileRoute("/_authenticated/admin")({
-  head: () => ({ meta: [{ title: "Admin Dashboard — UniBook" }] }),
+  head: () => ({ meta: [{ title: "Admin Dashboard — AIU-BOOK" }] }),
   component: AdminPage,
 });
 
