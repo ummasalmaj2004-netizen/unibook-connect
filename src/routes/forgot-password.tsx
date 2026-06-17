@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 export const Route = createFileRoute("/forgot-password")({
-  head: () => ({ meta: [{ title: "Reset password — UniBook" }] }),
+  head: () => ({ meta: [{ title: "Reset password — AIU-BOOK" }] }),
   component: ForgotPasswordPage,
 });
 
@@ -35,7 +35,7 @@ function ForgotPasswordPage() {
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <GraduationCap className="h-5 w-5" />
           </div>
-          <span className="text-lg">UniBook</span>
+          <span className="text-lg">AIU-BOOK</span>
         </Link>
         <div className="rounded-2xl border border-border bg-card p-6 shadow-xl">
           <h1 className="text-xl font-semibold">Forgot your password?</h1>

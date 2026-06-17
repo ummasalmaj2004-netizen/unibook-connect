@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 export const Route = createFileRoute("/_authenticated/book")({
-  head: () => ({ meta: [{ title: "Book Appointment — UniBook" }] }),
+  head: () => ({ meta: [{ title: "Book Appointment — AIU-BOOK" }] }),
   component: BookPage,
 });
 

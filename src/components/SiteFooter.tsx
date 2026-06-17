@@ -9,7 +9,7 @@ export function SiteFooter() {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
               <GraduationCap className="h-4 w-4" />
             </div>
-            UniBook
+            AIU-Book
           </div>
           <p className="mt-3 text-sm text-muted-foreground">
             The official appointment booking and tracking system for students and academic advisors.
@@ -26,7 +26,7 @@ export function SiteFooter() {
         <div>
           <h4 className="text-sm font-semibold text-foreground">Support</h4>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-            <li>help@unibook.edu</li>
+            <li>help@aiubook.edu.my</li>
             <li>+1 (555) 010-2030</li>
             <li>Mon–Fri, 9:00–17:00</li>
           </ul>
@@ -34,7 +34,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border">
         <div className="container mx-auto px-4 py-4 text-xs text-muted-foreground">
-          © {new Date().getFullYear()} UniBook · All rights reserved.
+          © {new Date().getFullYear()} AIU-BOOK · All rights reserved.
         </div>
       </div>
     </footer>

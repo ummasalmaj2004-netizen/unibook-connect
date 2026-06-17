@@ -79,10 +79,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "UniBook — Student Appointment Booking" },
+      { title: "AIU-BOOK — Student Appointment Booking" },
       { name: "description", content: "Book and track appointments with university lecturers and advisors." },
-      { name: "author", content: "UniBook" },
-      { property: "og:title", content: "UniBook — Student Appointment Booking" },
+      { name: "author", content: "AIU-BOOK" },
+      { property: "og:title", content: "AIU-BOOK — Student Appointment Booking" },
       { property: "og:description", content: "Book and track appointments with university lecturers and advisors." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

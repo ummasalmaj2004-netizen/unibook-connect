@@ -33,7 +33,7 @@ export function SiteHeader() {
             <GraduationCap className="h-5 w-5" />
           </div>
           <span className="text-base leading-tight">
-            <span className="block text-foreground">UniBook</span>
+            <span className="block text-foreground">AIU-BOOK</span>
             <span className="block text-[10px] font-normal text-muted-foreground">Student Appointments</span>
           </span>
         </Link>

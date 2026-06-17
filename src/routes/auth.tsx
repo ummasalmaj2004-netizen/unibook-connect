@@ -19,7 +19,7 @@ export const Route = createFileRoute("/auth")({
   validateSearch: (s) => searchSchema.parse(s),
   head: () => ({
     meta: [
-      { title: "Sign in — UniBook" },
+      { title: "Sign in — AIU-BOOK" },
       { name: "description", content: "Sign in or register for the university appointment booking system." },
     ],
   }),
@@ -45,7 +45,7 @@ function AuthPage() {
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <GraduationCap className="h-5 w-5" />
           </div>
-          <span className="text-lg">UniBook</span>
+          <span className="text-lg">AIU-BOOK</span>
         </Link>
         <div className="rounded-2xl border border-border bg-card p-6 shadow-xl">
           <Tabs value={tab} onValueChange={(v) => setTab(v as "login" | "register")}>
@@ -62,7 +62,7 @@ function AuthPage() {
           </Tabs>
         </div>
         <p className="mt-4 text-center text-xs text-muted-foreground">
-          By continuing you agree to UniBook's terms of service.
+          By continuing you agree to AIU-BOOK's terms of service.
         </p>
       </div>
     </div>
