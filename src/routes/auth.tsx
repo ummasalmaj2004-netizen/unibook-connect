@@ -113,16 +113,8 @@ const registerSchema = z.object({
 });
 
 const DEPARTMENTS = [
-  "Computer Science",
-  "Engineering",
-  "Business Administration",
-  "Mathematics",
-  "Physics",
-  "Chemistry",
-  "Biology",
-  "Arts & Humanities",
-  "Law",
-  "Medicine",
+  "Computer Science", "Engineering", "Business Administration", "Mathematics",
+  "Physics", "Chemistry", "Biology", "Arts & Humanities", "Law", "Medicine",
 ];
 
 function RegisterForm() {
@@ -156,9 +148,9 @@ function RegisterForm() {
       return;
     }
     if (role === "admin") {
-      toast.success("Account created. An administrator must grant the admin role before you can access admin features.");
+      toast.success("Account created. An administrator must grant admin access before you can use admin features.");
     } else {
-      toast.success("Account created! You can now sign in.");
+      toast.success("Account created! You're signed in.");
     }
   };
 

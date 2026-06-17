@@ -18,6 +18,7 @@ import { Route as AuthenticatedTrackRouteImport } from './routes/_authenticated/
 import { Route as AuthenticatedProfileRouteImport } from './routes/_authenticated/profile'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
 import { Route as AuthenticatedBookRouteImport } from './routes/_authenticated/book'
+import { Route as AuthenticatedAdminRouteImport } from './routes/_authenticated/admin'
 
 const ResetPasswordRoute = ResetPasswordRouteImport.update({
   id: '/reset-password',
@@ -63,12 +64,18 @@ const AuthenticatedBookRoute = AuthenticatedBookRouteImport.update({
   path: '/book',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedAdminRoute = AuthenticatedAdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/forgot-password': typeof ForgotPasswordRoute
   '/reset-password': typeof ResetPasswordRoute
+  '/admin': typeof AuthenticatedAdminRoute
   '/book': typeof AuthenticatedBookRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/profile': typeof AuthenticatedProfileRoute
@@ -79,6 +86,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/forgot-password': typeof ForgotPasswordRoute
   '/reset-password': typeof ResetPasswordRoute
+  '/admin': typeof AuthenticatedAdminRoute
   '/book': typeof AuthenticatedBookRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/profile': typeof AuthenticatedProfileRoute
@@ -91,6 +99,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/forgot-password': typeof ForgotPasswordRoute
   '/reset-password': typeof ResetPasswordRoute
+  '/_authenticated/admin': typeof AuthenticatedAdminRoute
   '/_authenticated/book': typeof AuthenticatedBookRoute
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
   '/_authenticated/profile': typeof AuthenticatedProfileRoute
@@ -103,6 +112,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/forgot-password'
     | '/reset-password'
+    | '/admin'
     | '/book'
     | '/dashboard'
     | '/profile'
@@ -113,6 +123,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/forgot-password'
     | '/reset-password'
+    | '/admin'
     | '/book'
     | '/dashboard'
     | '/profile'
@@ -124,6 +135,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/forgot-password'
     | '/reset-password'
+    | '/_authenticated/admin'
     | '/_authenticated/book'
     | '/_authenticated/dashboard'
     | '/_authenticated/profile'
@@ -203,10 +215,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedBookRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/admin': {
+      id: '/_authenticated/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AuthenticatedAdminRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
   }
 }
 
 interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAdminRoute: typeof AuthenticatedAdminRoute
   AuthenticatedBookRoute: typeof AuthenticatedBookRoute
   AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
   AuthenticatedProfileRoute: typeof AuthenticatedProfileRoute
@@ -214,6 +234,7 @@ interface AuthenticatedRouteRouteChildren {
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAdminRoute: AuthenticatedAdminRoute,
   AuthenticatedBookRoute: AuthenticatedBookRoute,
   AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
   AuthenticatedProfileRoute: AuthenticatedProfileRoute,
